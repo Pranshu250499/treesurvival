@@ -1,4 +1,12 @@
 import os
+import sys
+
+# Ensure the backend directory is in sys.path so 'app' package can be imported from anywhere
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+BACKEND_DIR = os.path.dirname(CURRENT_DIR)
+if BACKEND_DIR not in sys.path:
+    sys.path.insert(0, BACKEND_DIR)
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -36,8 +44,7 @@ app.add_middleware(
 )
 
 # Ensure uploads directory exists and mount static files
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-UPLOADS_DIR = os.path.join(BASE_DIR, "uploads")
+UPLOADS_DIR = os.path.join(CURRENT_DIR, "uploads")
 os.makedirs(UPLOADS_DIR, exist_ok=True)
 os.makedirs(os.path.join(UPLOADS_DIR, "qr_codes"), exist_ok=True)
 os.makedirs(os.path.join(UPLOADS_DIR, "inspections"), exist_ok=True)
@@ -66,4 +73,5 @@ def health():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    print("Starting VrikshaSetu FastAPI on http://127.0.0.1:8000 ...")
+    uvicorn.run(app, host="127.0.0.1", port=8000)
