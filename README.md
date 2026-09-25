@@ -60,8 +60,7 @@ In India, an estimated **70% to 80% of saplings die within 24 months** of affore
 - **Web Speech Audio Guide**: Speaks personalized care instructions aloud in Hindi for rural Gram Panchayat and Self-Help Group (SHG) volunteers.
 - **Rural Offline Buffer**: Stores logs locally in low-connectivity forest patches and auto-syncs when online.
 
-### 6. 📊 Integrated Hackathon Judge Pitch Deck
-- Interactive presentation slides embedded directly in the UI explaining the problem, mathematics, CSR economics, and policy roadmap.
+
 
 ---
 
@@ -101,5 +100,3 @@ Open in Browser: `http://localhost:5173`
 
 ---
 
-## 👥 Team Pandas Py (Jamshedpur)
-Developed with passion for sustainable urban forestry and rural afforestation in Jharkhand for **Hackathon 6.0**.
