@@ -1,6 +1,6 @@
 # 🌲 VrikshaSetu (वृक्ष सेतु)
 ### *Tree Survival, Not Just Plantation*
-**Hackathon 6.0 • Team Pandas Py (Jamshedpur)**
+
 
 ---
 
